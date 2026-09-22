@@ -481,7 +481,8 @@ item (FEAT_TRAINS, emu_E233) {
 
 		speed				: 120 km/h;
 		track_type			: TR_1067_DC;
-		power				: 180*4*1342/1000; //定格と過負荷時との平均。0.5Mになるように設定
+		power				: 161*4*1342/1000;	//定格:140kW, 過負荷時:140*1.45=203kW,
+									//加重平均:((140*2)+203)/3=161kW。0.5Mの2両分(=4基)で設定
 		weight				: 32 ton;
 		
 		climates_available		: ALL_CLIMATES;
@@ -528,7 +529,7 @@ item (FEAT_TRAINS, emu_E233) {
 		loading_speed			: param_loading_4D;
 		cargo_age_period		: param_decay_local;
 		cargo_subtype_text		: sw_E233_subtypetext_mucar;
-		power				: 180*2*1342/1000; //定格と過負荷時との平均。0.5Mになるように設定
+		power				: 161*2*1342/1000; //定格(140kW)と過負荷時(140*1.45=203kW)との加重平均。0.5Mの1両分(=2基)で設定
 		weight				: 28;
 	}
 }

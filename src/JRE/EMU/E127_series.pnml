@@ -87,7 +87,7 @@ item(FEAT_TRAINS, emu_E127) {
 
         speed:                        110 km/h;
         track_type:                   TR_1067_DC;
-        power:                        480 kW;
+        power:                        109*4*1342/1000;	//定格:95kW, 過負荷時:95*1.45=138kW, 加重平均:((95*2)+138)/3=109kW。0.5Mの2両分(=4基)で設定
         weight:                       33 ton;
 
         climates_available:           ALL_CLIMATES;
