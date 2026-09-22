@@ -1,42 +1,41 @@
 /*---GFX: Spritesets---*/
 //Purchase Sprites
-spriteset (spriteset_303_purchase,	                                                     "gfx/JRW/emu207/purchase.png")               {tmpl_purchase_dh(0, 0)}
-alternative_sprites(spriteset_303_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,          "gfx/JRK/emu303/purchase_32bpp.png")         {tmpl_purchase_dh_32bpp(0, 0)}
+spriteset		(spriteset_303_purchase,						"gfx/JRW/emu207/purchase.png")		{tmpl_purchase_dh	(0, 0)}
+alternative_sprites	(spriteset_303_purchase,	ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/purchase_32bpp.png")	{tmpl_purchase_dh_32bpp	(0, 0)}
 
 //303 Standard
-spriteset (spriteset_303_front,    	      	"gfx/OTHER/mucar.png")      	{ tmpl_std(0, 0) }
-spriteset (spriteset_303_back,        	    "gfx/OTHER/mucar.png")       	{ tmpl_std(0, 0) }
-spriteset (spriteset_303_mid,    		        "gfx/OTHER/mucar.png")       	{ tmpl_std(0, 0) }
-spriteset (spriteset_303_mid_panto,    		        "gfx/OTHER/mucar.png") 	{ tmpl_std(0, 0) }
+spriteset		(spriteset_303_front,							"gfx/OTHER/mucar.png")			{tmpl_std	(0, 0)}
+spriteset		(spriteset_303_back,							"gfx/OTHER/mucar.png")			{tmpl_std	(0, 0)}
+spriteset		(spriteset_303_mid,							"gfx/OTHER/mucar.png")			{tmpl_std	(0, 0)}
+spriteset		(spriteset_303_mid_panto,						"gfx/OTHER/mucar.png")			{tmpl_std	(0, 0)}
 
-alternative_sprites(spriteset_303_front,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,             "gfx/JRK/emu303/303-1-1.png")           {tmpl_std(0, 1)}
-alternative_sprites(spriteset_303_back,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,             "gfx/JRK/emu303/303-1-1.png")           {tmpl_std_rev(0, 26)}
-alternative_sprites(spriteset_303_mid,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,             "gfx/JRK/emu303/303-1-2.png")           {tmpl_std_rev(0, 1)}
-alternative_sprites(spriteset_303_mid_panto,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,       "gfx/JRK/emu303/303-1-3.png")           {tmpl_std_rev(0, 1)}
+alternative_sprites	(spriteset_303_front,		ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/303-1-1.png")		{tmpl_std	(0, 1)}
+alternative_sprites	(spriteset_303_back,		ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/303-1-1.png")		{tmpl_std_rev	(0, 26)}
+alternative_sprites	(spriteset_303_mid,		ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/303-1-2.png")		{tmpl_std	(0, 1)}
+alternative_sprites	(spriteset_303_mid_panto,	ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/303-1-3.png")		{tmpl_std	(0, 1)}
 
-spriteset (spriteset_303_back_panto,                     "gfx/OTHER/mucar.png") 	{ tmpl_std(0, 0) }
-
-alternative_sprites(spriteset_303_back_panto,                 ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,       "gfx/JRK/emu303/303-1-extra.png")             {tmpl_std_rev(0, 26)}
+spriteset		(spriteset_303_back_panto,						"gfx/OTHER/mucar.png")			{tmpl_std	(0, 0)}
+alternative_sprites	(spriteset_303_back_panto,	ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,	"gfx/JRK/emu303/303-1-extra.png")	{tmpl_std_rev	(0, 26)}
 
 /*---END OF SECTION---*/
 
 /*---GFX: Pantograph Positions---*/
-switch(FEAT_TRAINS,SELF, sw_303_gfx_pantograph_pos, position_in_vehid_chain%6){
-  0: spriteset_303_mid_panto;
-  3: spriteset_303_mid_panto;
-  default: spriteset_303_mid;
+switch (FEAT_TRAINS,SELF, sw_303_gfx_pantograph_pos,		position_in_vehid_chain%6) {
+	0	: spriteset_303_mid_panto;
+	3	: spriteset_303_mid_panto;
+	default	: spriteset_303_mid;
 }
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //303 Standard
-switch(FEAT_TRAINS, SELF, sw_303_gfx_pantocheck, position_in_vehid_chain){
- 0: spriteset_303_back;
- default: spriteset_303_back_panto;
+switch (FEAT_TRAINS, SELF, sw_303_gfx_pantocheck,		position_in_vehid_chain) {
+	0	: spriteset_303_back;
+	default	: spriteset_303_back_panto;
 }
-switch(FEAT_TRAINS, SELF, sw_303_gfx_frontback_flipcheck, vehicle_is_flipped){
- 0: spriteset_303_front;
- default: sw_303_gfx_pantocheck;
+switch (FEAT_TRAINS, SELF, sw_303_gfx_frontback_flipcheck,	train_is_driving_backwards != vehicle_is_flipped) {
+	1	: sw_303_gfx_pantocheck;
+	spriteset_303_front;
 }
 /*---END OF SECTION---*/
 
@@ -46,94 +45,94 @@ switch(FEAT_TRAINS, SELF, sw_303_gfx_frontback_flipcheck, vehicle_is_flipped){
 
 /*---GFX: Livery Refitting Switches---*/
 //Main Switches
-switch(FEAT_TRAINS, SELF, sw_303_gfx_mucar, cargo_subtype){
-  0: sw_303_gfx_pantograph_pos;
+switch (FEAT_TRAINS, SELF, sw_303_gfx_mucar,	cargo_subtype) {
+	0	: sw_303_gfx_pantograph_pos;
 }
-switch(FEAT_TRAINS, SELF, sw_303_gfx_main, cargo_subtype) {
-  0: sw_303_gfx_frontback_flipcheck;
+switch (FEAT_TRAINS, SELF, sw_303_gfx_main,	cargo_subtype) {
+	0	: sw_303_gfx_frontback_flipcheck;
 }
 
 //Menu Switches
 /*
-switch(FEAT_TRAINS, SELF, sw_303_subtypetext_mucar, cargo_subtype) {
-  0: string(JRK303_STD);
+switch (FEAT_TRAINS, SELF, sw_303_subtypetext_mucar,	cargo_subtype) {
+	0	: string(JRK303_STD);
 }
-switch(FEAT_TRAINS, SELF, sw_303_subtypetext_main, cargo_subtype) {
-  0: string(JRK303_STD);
+switch (FEAT_TRAINS, SELF, sw_303_subtypetext_main,	cargo_subtype) {
+	0	: string(JRK303_STD);
 }
 */
 /*---END OF SECTION---*/
 
 //Coupling
-  switch(FEAT_TRAINS, SELF, sw_303_attach_vehid, [vehicle_type_id == emu_303 || vehicle_type_id == mu_car]) {
-  0: return string(MU_UNIQUE);
-  }
+switch (FEAT_TRAINS, SELF, sw_303_attach_vehid, [vehicle_type_id == emu_303 || vehicle_type_id == mu_car]) {
+	0	: return string(MU_UNIQUE);
+}
 
-item(FEAT_TRAINS, emu_303) {
-    property {
-        name:                         string(JRK_303);
-        introduction_date:            date(2000, 01, 22);
-        model_life:                   3;
-        vehicle_life:                 35;
-        reliability_decay:            24;
-
-        cargo_capacity:               param_capacity_local;
-        loading_speed:                param_loading_4D;
-        cargo_age_period:             param_decay_local;
-        cost_factor:                  20;
-        running_cost_factor:          50;
-
-        speed:                        85 km/h;
-        track_type:                   TR_1067_DC;
-        power:                        600 kW;
-        weight:                       33 ton;
-
-        climates_available:           ALL_CLIMATES;
-        ai_special_flag:              AI_FLAG_PASSENGER;
-        sprite_id:                    SPRITE_ID_NEW_TRAIN;
-        misc_flags:                   bitmask(TRAIN_FLAG_MU);
-        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
-        non_refittable_cargo_classes: bitmask();
-        refit_cost:                   0;
-        dual_headed:                  1;
-        ai_engine_rank:               0;
-
-        running_cost_base:            RUNNING_COST_ELECTRIC;
-        engine_class:                 ENGINE_CLASS_ELECTRIC;
-        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 4, ENABLE_WAGON_POWER);
-
-        tractive_effort_coefficient:  0.2;
-        air_drag_coefficient:         0.07;
-        bitmask_vehicle_info:         0;
-        length: 8;
-    }
-    /*Graphics and Callbacks*/
-      graphics {
-        default:                      sw_303_gfx_main;
-		    purchase:                 spriteset_303_purchase;
-		    additional_text:	      
-        string(STR_TRAIN_DESC,
-        string(STR_NARROWGAUGE),
-        string(STR_DENKI, string(STR_DC_N, 1500)),
-        string(STR_LOAD_SPEED, string(STR_DOORS, 4)),
-        string(STR_USAGE, string(STR_USE_COMMUTER)),
-        string(STR_OPERATOR,string(STR_JR,string(STR_JR_KYUSHU))));
-        // string(STR_LIVERIES, string(LV_VARIOUS)));
-        
-        //cargo_subtype_text:           sw_303_subtypetext_main;
-        purchase_cargo_capacity:      param_capacity_local - param_capacity_local;
-        can_attach_wagon:			  sw_303_attach_vehid;
-        //start_stop:                   ;
-    }
-    /*Multiple Unit Car*/
-      livery_override(mu_car){
-        default:                      sw_303_gfx_mucar;
-        cargo_capacity:               param_capacity_local;
-        loading_speed:                param_loading_4D;
-        cargo_age_period:             param_decay_local;
-        //cargo_subtype_text:           sw_303_subtypetext_mucar;
-        power: 600/2;
-        weight: 28;
-      }
-
+item (FEAT_TRAINS, emu_303) {
+	property {
+		name				: string(JRK_303);
+		introduction_date		: date(2000, 01, 22);
+		model_life			: 3;
+		vehicle_life			: 35;
+		reliability_decay		: 24;
+		
+		cargo_capacity			: param_capacity_local;
+		loading_speed			: param_loading_4D;
+		cargo_age_period		: param_decay_local;
+		cost_factor			: 20;
+		running_cost_factor		: 50;
+		
+		speed				: 85 km/h;
+		track_type			: TR_1067_DC;
+		power				: 230*4*1342/1000;	//定格:200kW, 過負荷時:200*1.45=290kW,
+									//加重平均:((200*2)+290)/3=230kW, 0.5Mの2両分(=4基)で設定。
+		weight				: 33 ton;
+		
+		climates_available		: ALL_CLIMATES;
+		ai_special_flag			: AI_FLAG_PASSENGER;
+		sprite_id			: SPRITE_ID_NEW_TRAIN;
+		misc_flags			: bitmask(TRAIN_FLAG_MU);
+		refittable_cargo_classes	: bitmask(CC_PASSENGERS);
+		non_refittable_cargo_classes	: bitmask();
+		refit_cost			: 0;
+		dual_headed			: 1;
+		ai_engine_rank			: 0;
+		
+		running_cost_base		: RUNNING_COST_ELECTRIC;
+		engine_class			: ENGINE_CLASS_ELECTRIC;
+		visual_effect_and_powered	: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 4, ENABLE_WAGON_POWER);
+		
+		tractive_effort_coefficient	: 0.2;
+		air_drag_coefficient		: 0.07;
+		bitmask_vehicle_info		: 0;
+		length				: 8;
+	}
+	/*Graphics and Callbacks*/
+	graphics {
+		default				: sw_303_gfx_main;
+		purchase			: spriteset_303_purchase;
+		additional_text			: string(STR_TRAIN_DESC,
+							string(STR_NARROWGAUGE),
+							string(STR_DENKI, string(STR_DC_N, 1500)),
+							string(STR_LOAD_SPEED, string(STR_DOORS, 4)),
+							string(STR_USAGE, string(STR_USE_COMMUTER)),
+							string(STR_OPERATOR,string(STR_JR,string(STR_JR_KYUSHU)))
+							);
+						// string(STR_LIVERIES, string(LV_VARIOUS)));
+		
+		//cargo_subtype_text		: sw_303_subtypetext_main;
+		purchase_cargo_capacity		: param_capacity_local - param_capacity_local;
+		can_attach_wagon		: sw_303_attach_vehid;
+		//start_stop			: ;
+	}
+	/*Multiple Unit Car*/
+	livery_override(mu_car) {
+		default				: sw_303_gfx_mucar;
+		cargo_capacity			: param_capacity_local;
+		loading_speed			: param_loading_4D;
+		cargo_age_period		: param_decay_local;
+		//cargo_subtype_text		: sw_303_subtypetext_mucar;
+		power				: 230*2*1342/1000;	//定格と過負荷時の加重平均(230kW)、0.5Mの1両分(=2基)で設定。
+		weight				: 28;
+	}
 }
