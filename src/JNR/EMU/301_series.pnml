@@ -129,7 +129,7 @@ switch(FEAT_TRAINS, SELF, sw_301_gfx_pantocheck_chousobu, position_in_vehid_chai
   0: sw_301_back_chousobu;
   default: sw_301_back_panto_chousobu;
 }
-switch(FEAT_TRAINS, SELF, sw_301_gfx_frontback_flipcheck_chousobu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_301_gfx_frontback_flipcheck_chousobu, train_is_driving_backwards != vehicle_is_flipped){
   0: sw_301_front_chousobu;
   default: sw_301_gfx_pantocheck_chousobu;
 }
@@ -137,7 +137,7 @@ switch(FEAT_TRAINS, SELF, sw_301_gfx_pantocheck_tozai, position_in_vehid_chain){
   0: sw_301_back_tozai;
   default: sw_301_back_panto_tozai;
 }
-switch(FEAT_TRAINS, SELF, sw_301_gfx_frontback_flipcheck_tozai, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_301_gfx_frontback_flipcheck_tozai, train_is_driving_backwards != vehicle_is_flipped){
   0: sw_301_front_tozai;
   default: sw_301_gfx_pantocheck_tozai;
 }

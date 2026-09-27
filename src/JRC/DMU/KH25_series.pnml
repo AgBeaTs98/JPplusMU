@@ -11,7 +11,7 @@ spriteset (spriteset_KH25_back,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,     "gf
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //KH25 JRC
-switch(FEAT_TRAINS, SELF, sw_KH25_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH25_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH25_front;
  default: spriteset_KH25_back;
 }

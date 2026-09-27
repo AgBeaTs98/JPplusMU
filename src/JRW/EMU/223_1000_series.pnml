@@ -86,17 +86,17 @@ switch(FEAT_TRAINS,SELF, sw_223_2000_gfx_pantograph_pos, num_vehs_in_vehid_chain
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //223_1000
-switch(FEAT_TRAINS, SELF, sw_223_1000_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_223_1000_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_223_1000_front;
  default: spriteset_223_1000_back;
 }
 //223_1000 A-SEAT
-switch(FEAT_TRAINS, SELF, sw_223_1000as_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_223_1000as_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_223_1000_grfront;
  default: spriteset_223_1000_back;
 }
 //223_2000
-switch(FEAT_TRAINS, SELF, sw_223_2000_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_223_2000_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_223_2000_front;
  default: spriteset_223_2000_back;
 }

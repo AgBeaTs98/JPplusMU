@@ -131,7 +131,7 @@ switch(FEAT_TRAINS, SELF, sw_4151500_gfx_pantocheck_joban1, position_in_vehid_ch
  0: spriteset_4151500_back_joban1;
 default: spriteset_4151500_back_panto_joban1;
 }
-switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban1, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_4151500_front_joban1;
  default: sw_4151500_gfx_pantocheck_joban1;
 }
@@ -139,7 +139,7 @@ switch(FEAT_TRAINS, SELF, sw_4151500_gfx_pantocheck_joban2, position_in_vehid_ch
  0: spriteset_4151500_back_joban2;
 default: spriteset_4151500_back_panto_joban2;
 }
-switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban2, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban2, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_4151500_front_joban2;
  default: sw_4151500_gfx_pantocheck_joban2;
 }
@@ -147,7 +147,7 @@ switch(FEAT_TRAINS, SELF, sw_4151500_gfx_pantocheck_joban3, position_in_vehid_ch
  0: spriteset_4151500_back_joban3;
 default: spriteset_4151500_back_panto_joban3;
 }
-switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban3, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_joban3, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_4151500_front_joban3;
  default: sw_4151500_gfx_pantocheck_joban3;
 }
@@ -155,7 +155,7 @@ switch(FEAT_TRAINS, SELF, sw_4151500_gfx_pantocheck_kyushu, position_in_vehid_ch
  0: sw_4151500_gfx_spriteset_4151500_back_kyushu;
 default: sw_4151500_gfx_spriteset_4151500_back_panto_kyushu;
 }
-switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_kyushu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_4151500_gfx_frontback_flipcheck_kyushu, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_4151500_gfx_spriteset_4151500_front_kyushu;
  default: sw_4151500_gfx_pantocheck_kyushu;
 }

@@ -64,13 +64,13 @@ switch(FEAT_TRAINS, SELF, sw_213_gfx_front_liverycheck_jrw, cargo_subtype) {
 2:spriteset_213_front_s1;
 default:spriteset_213_front_jrw;
 }
-switch(FEAT_TRAINS, SELF, sw_213_gfx_frontback_flipcheck_jrw, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_213_gfx_frontback_flipcheck_jrw, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_213_gfx_front_liverycheck_jrw;
  default: spriteset_213_back_jrw;
 }
 
 //213 Shonan
-switch(FEAT_TRAINS, SELF, sw_213_gfx_frontback_flipcheck_shonan, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_213_gfx_frontback_flipcheck_shonan, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_213_gfx_year_front_shonan;
  default: sw_213_gfx_year_back_shonan_pantograph;
 }

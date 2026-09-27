@@ -11,7 +11,7 @@ spriteset(spriteset_6340_mid,             ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,   
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
-switch(FEAT_TRAINS, SELF, sw_6340_gfx_frontback, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_6340_gfx_frontback, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_6340_back;
  default: spriteset_6340_front;
 }

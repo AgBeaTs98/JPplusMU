@@ -455,7 +455,7 @@ switch(FEAT_TRAINS, SELF, sw_113_gfx_back_pantocheck_shonan, position_in_vehid_c
  0: sw_113_gfx_spriteset_113_back_shonan;
  default: sw_113_gfx_spriteset_113_back_panto_shonan;
 }
-switch(FEAT_TRAINS, SELF, sw_113_gfx_frontback_flipcheck_shonan, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_113_gfx_frontback_flipcheck_shonan, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_113_gfx_spriteset_113_front_shonan;
  default: sw_113_gfx_back_pantocheck_shonan;
 }

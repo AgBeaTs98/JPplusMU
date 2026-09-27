@@ -30,7 +30,7 @@ switch(FEAT_TRAINS, SELF, sw_203_gfx_pantocheck_jnr203, position_in_vehid_chain)
   0: spriteset_203_back_jnr203;
   default: spriteset_203_back_panto_jnr203;
 }
-switch(FEAT_TRAINS, SELF, sw_203_gfx_frontback_flipcheck_jnr203, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_203_gfx_frontback_flipcheck_jnr203, train_is_driving_backwards != vehicle_is_flipped){
   0: spriteset_203_front_jnr203;
   default: sw_203_gfx_pantocheck_jnr203;
 }

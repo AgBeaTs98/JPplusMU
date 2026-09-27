@@ -26,22 +26,22 @@ alternative_sprites(spriteset_E127_frontpan_matsum,           ZOOM_LEVEL_NORMAL,
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //E127-0 Niigata
-switch(FEAT_TRAINS, SELF, sw_E127_niigata_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E127_niigata_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E127_front_niigata;
  default: spriteset_E127_back_niigata;
 }
 //E127-0 Niigata Extra Pantogaph
-switch(FEAT_TRAINS, SELF, sw_E127_niigata2_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E127_niigata2_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E127_frontpan_niigata;
  default: spriteset_E127_back_niigata;
 }
 //E127-100 Matsumoto
-switch(FEAT_TRAINS, SELF, sw_E127_matsum_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E127_matsum_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E127_front_matsum;
  default: spriteset_E127_back_matsum;
 }
 //E127-100 Matsumoto Extra Pantogaph
-switch(FEAT_TRAINS, SELF, sw_E127_matsum2_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E127_matsum2_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E127_frontpan_matsum;
  default: spriteset_E127_back_matsum;
 }

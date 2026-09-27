@@ -38,12 +38,12 @@ switch(FEAT_TRAINS,SELF, sw_221_gfx_pantograph_pos, num_vehs_in_vehid_chain){
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //221 Sinlge-Pantograph
-switch(FEAT_TRAINS, SELF, sw_221_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_221_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_221_front;
  default: spriteset_221_back_sp;
 }
 //221 Dual-Pantograph
-switch(FEAT_TRAINS, SELF, sw_221dp_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_221dp_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_221_front;
  default: spriteset_221_back_dp;
 }

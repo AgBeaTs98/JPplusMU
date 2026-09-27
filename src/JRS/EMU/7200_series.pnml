@@ -13,7 +13,7 @@ alternative_sprites(spriteset_7200_back,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP,
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches---*/
-switch(FEAT_TRAINS, SELF, sw_7200_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_7200_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_7200_front;
  default: spriteset_7200_back;
 }

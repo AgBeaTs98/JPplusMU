@@ -63,11 +63,11 @@ alternative_sprites(spriteset_KH28_revflip_jnr,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_3
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //KH58 JNR Vermillion no AC
-switch(FEAT_TRAINS, SELF, sw_KH58_jnr_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH58_jnr_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH58_revflip_jnr;
  default: spriteset_KH58_rev_jnr;
 }
-switch(FEAT_TRAINS, SELF, sw_KH58_jnr_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH58_jnr_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH58_jnr;
  default: spriteset_KH58_frontflip_jnr;
 }
@@ -80,11 +80,11 @@ switch(FEAT_TRAINS, SELF, sw_KH58_jnr_gfx_frontback_revcheck_posfront, position_
  default: sw_KH58_jnr_gfx_frontback_revcheck_posback;
 }
 //KH28 JNR Vermillion no AC
-switch(FEAT_TRAINS, SELF, sw_KH28_jnr_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH28_jnr_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH28_revflip_jnr;
  default: spriteset_KH28_rev_jnr;
 }
-switch(FEAT_TRAINS, SELF, sw_KH28_jnr_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH28_jnr_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH28_jnr;
  default: spriteset_KH28_frontflip_jnr;
 }
@@ -97,11 +97,11 @@ switch(FEAT_TRAINS, SELF, sw_KH28_jnr_gfx_frontback_revcheck_posfront, position_
  default: sw_KH28_jnr_gfx_frontback_revcheck_posback;
 }
 //KH28 JNR Vermillion AC
-switch(FEAT_TRAINS, SELF, sw_KH28_jnr_ac_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH28_jnr_ac_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH28_revflip_jnr_ac;
  default: spriteset_KH28_rev_jnr_ac;
 }
-switch(FEAT_TRAINS, SELF, sw_KH28_jnr_ac_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH28_jnr_ac_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH28_jnr_ac;
  default: spriteset_KH28_frontflip_jnr_ac;
 }
@@ -114,11 +114,11 @@ switch(FEAT_TRAINS, SELF, sw_KH28_jnr_ac_gfx_frontback_revcheck_posfront, positi
  default: sw_KH28_jnr_ac_gfx_frontback_revcheck_posback;
 }
 //KH58 JNR Vermillion AC
-switch(FEAT_TRAINS, SELF, sw_KH58_jnr_ac_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH58_jnr_ac_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH58_revflip_jnr_ac;
  default: spriteset_KH58_rev_jnr_ac;
 }
-switch(FEAT_TRAINS, SELF, sw_KH58_jnr_ac_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH58_jnr_ac_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH58_jnr_ac;
  default: spriteset_KH58_frontflip_jnr_ac;
 }

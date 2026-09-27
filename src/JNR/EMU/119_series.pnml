@@ -68,28 +68,28 @@ alternative_sprites(spriteset_EMU119_std_0shonan_muback,           ZOOM_LEVEL_NO
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 
 //standard normal type
-switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_std_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_std_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_EMU119_std_mufront;
  default: spriteset_EMU119_std_muback;
 }
 //single ver
 
 //standard gable type
-switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_std_gable_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_std_gable_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_EMU119_std_gable_mufront;
  default: spriteset_EMU119_std_gable_muback;
 }
 //single ver
 
 //ube normal type
-switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_ube_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_ube_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_EMU119_ube_mufront;
  default: spriteset_EMU119_ube_muback;
 }
 //single ver
 
 //ube gable type
-switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_ube_gable_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_EMU119_gfx_ube_gable_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_EMU119_ube_gable_mufront;
  default: spriteset_EMU119_ube_gable_muback;
 }

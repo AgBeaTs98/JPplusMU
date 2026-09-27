@@ -46,27 +46,27 @@ alternative_sprites(spriteset_KH111_back_koumi,          ZOOM_LEVEL_NORMAL, BIT_
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //KH111 Green
-switch(FEAT_TRAINS, SELF, sw_KH111_green_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH111_green_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH111_front_green;
  default: spriteset_KH111_back_green;
 }
 //KH111 Hachiko Line
-switch(FEAT_TRAINS, SELF, sw_KH111_hachiko_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH111_hachiko_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH111_front_hachiko;
  default: spriteset_KH111_back_hachiko;
 }
 //KH111 Rikuu Line
-switch(FEAT_TRAINS, SELF, sw_KH111_rikuu_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH111_rikuu_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH111_front_rikuu;
  default: spriteset_KH111_back_rikuu;
 }
 //KH111 Akita Relay
-switch(FEAT_TRAINS, SELF, sw_KH111_akita_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH111_akita_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH111_front_akita;
  default: spriteset_KH111_back_akita;
 }
 //KH111 Express Koumi Line Special
-switch(FEAT_TRAINS, SELF, sw_KH111_koumi_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH111_koumi_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH111_front_koumi;
  default: spriteset_KH111_back_koumi;
 }

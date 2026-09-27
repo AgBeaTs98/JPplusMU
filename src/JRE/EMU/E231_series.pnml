@@ -156,7 +156,7 @@ switch(FEAT_TRAINS, SELF, sw_E231_gfx_pantocheck_tk, position_in_vehid_chain){
  0: spriteset_E231_back_tk;
  default: spriteset_E231_backpan_tk;
 }
-switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_tk, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_tk, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E231_front_tk;
  default: sw_E231_gfx_pantocheck_tk;
 }
@@ -166,7 +166,7 @@ switch(FEAT_TRAINS, SELF, sw_E231_gfx_pantocheck_0sobu, position_in_vehid_chain)
  0: spriteset_E231_0_back_sobu;
  default: spriteset_E231_0_backpan_sobu;
 }
-switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_0sobu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_0sobu, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E231_0_front_sobu;
  default: sw_E231_gfx_pantocheck_0sobu;
 }
@@ -176,7 +176,7 @@ switch(FEAT_TRAINS, SELF, sw_E231_gfx_pantocheck_500sobu, position_in_vehid_chai
  0: spriteset_E231_500_back_sobu;
  default: spriteset_E231_500_backpan_sobu;
 }
-switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_500sobu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_500sobu, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E231_500_front_sobu;
  default: sw_E231_gfx_pantocheck_500sobu;
 }
@@ -186,7 +186,7 @@ switch(FEAT_TRAINS, SELF, sw_E231_gfx_pantocheck_yama, position_in_vehid_chain){
  0: spriteset_E231_back_yamanote;
  default: spriteset_E231_backpan_yamanote;
 }
-switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_yama, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_yama, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E231_front_yamanote;
  default: sw_E231_gfx_pantocheck_yama;
 }
@@ -196,7 +196,7 @@ switch(FEAT_TRAINS, SELF, sw_E231_gfx_pantocheck_chsoto, position_in_vehid_chain
  0: spriteset_E231_back_chsoto;
  default: spriteset_E231_backpan_chsoto;
 }
-switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_chsoto, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E231_gfx_frontback_flipcheck_chsoto, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E231_front_chsoto;
  default: sw_E231_gfx_pantocheck_chsoto;
 }

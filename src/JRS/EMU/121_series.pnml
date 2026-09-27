@@ -27,15 +27,15 @@ alternative_sprites(spriteset_121_back_jrs_redfront,     ZOOM_LEVEL_NORMAL, BIT_
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches---*/
-switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jnr_red, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jnr_red, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_121_front_jnr_red;
  default: spriteset_121_back_jnr_red;
 }
-switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jrs_blue, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jrs_blue, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_121_front_jrs_blue;
  default: spriteset_121_back_jrs_blue;
 }
-switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jrs_redfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_121_gfx_frontback_flipcheck_jrs_redfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_121_front_jrs_redfront;
  default: spriteset_121_back_jrs_redfront;
 }

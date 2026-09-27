@@ -42,11 +42,11 @@ alternative_sprites(spriteset_KH181_midgr_rev_JNR,           ZOOM_LEVEL_NORMAL, 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 
 //KH181 JNR
-switch(FEAT_TRAINS, SELF, sw_KH181_JNR_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH181_JNR_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH181_revflip_JNR;
  default: spriteset_KH181_rev_JNR;
 }
-switch(FEAT_TRAINS, SELF, sw_KH181_JNR_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH181_JNR_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH181_JNR;
  default: spriteset_KH181_frontflip_JNR;
 }

@@ -42,15 +42,15 @@ switch(FEAT_TRAINS, SELF, sw_719_gfx_spriteset_719_back_banetsuai, [build_year>2
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches---*/
-switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_standard, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_standard, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_719_front_standard;
  default: sw_719_gfx_spriteset_719_back_standard;
 }
-switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_akita, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_akita, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_719_front_akita;
  default: spriteset_719_back_akita;
 }
-switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_banetsuai, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_719_gfx_frontback_flipcheck_banetsuai, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_719_front_banetsuai;
  default: sw_719_gfx_spriteset_719_back_banetsuai;
 }

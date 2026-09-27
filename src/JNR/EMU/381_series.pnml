@@ -275,7 +275,7 @@ switch(FEAT_TRAINS, SELF, sw_381_gfx_pantocheck, position_in_vehid_chain){
   0: sw_381_gfx_back_livery;
   default: sw_381_gfx_back_livery;
 }
-switch(FEAT_TRAINS, SELF, sw_381_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_381_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
   0: sw_381_gfx_front_livery;
   default: sw_381_gfx_pantocheck;
 }

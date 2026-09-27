@@ -32,25 +32,25 @@ alternative_sprites(spriteset_107_back_nikko, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //107 Standard "Sandwich Train" Livery
-switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_std, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_std, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_107_back_std;
  default: spriteset_107_front_std;
 }
 
 //107 Joshin Electric Railway
-switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_joshin, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_joshin, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_107_back_joshin;
  default: spriteset_107_front_joshin;
 }
 
 //107 Nikko Line Red
-switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_nikkored, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_nikkored, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_107_back_nikkored;
  default: spriteset_107_front_nikkored;
 }
 
 //107 Nikko Line "N"
-switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_nikko, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_107_gfx_frontback_nikko, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_107_back_nikko;
  default: spriteset_107_front_nikko;
 }

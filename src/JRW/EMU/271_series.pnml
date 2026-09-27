@@ -47,7 +47,7 @@ switch(FEAT_TRAINS, SELF, sw_271_gfx_pantocheck_Haruka, position_in_vehid_chain)
   0: spriteset_271_back_Haruka;
   default: spriteset_271_back_panto_Haruka;
 }
-switch(FEAT_TRAINS, SELF, sw_271_gfx_frontback_flipcheck_Haruka, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_271_gfx_frontback_flipcheck_Haruka, train_is_driving_backwards != vehicle_is_flipped){
   0: spriteset_271_front_Haruka;
   default: sw_271_gfx_pantocheck_Haruka;
 }

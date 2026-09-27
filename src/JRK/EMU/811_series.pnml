@@ -52,27 +52,27 @@ alternative_sprites(spriteset_811_mid_spaceworldnew,           ZOOM_LEVEL_NORMAL
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //811 Orginal
-switch(FEAT_TRAINS, SELF, sw_811_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_811_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_811_front;
  default: spriteset_811_back;
 }
 //811 Renewal
-switch(FEAT_TRAINS, SELF, sw_811_renewal_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_811_renewal_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_811_front_renewal;
  default: spriteset_811_back_renewal;
 }
 //811 Greenland
-switch(FEAT_TRAINS, SELF, sw_811_greenland_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_811_greenland_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_811_front_greenland;
  default: spriteset_811_back_greenland;
 }
 //811 Spaceworld
-switch(FEAT_TRAINS, SELF, sw_811_spaceworld_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_811_spaceworld_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_811_front_spaceworld;
  default: spriteset_811_back_spaceworld;
 }
 //811 Spaceworld New
-switch(FEAT_TRAINS, SELF, sw_811_spaceworldnew_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_811_spaceworldnew_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_811_front_spaceworldnew;
  default: spriteset_811_back_spaceworldnew;
 }

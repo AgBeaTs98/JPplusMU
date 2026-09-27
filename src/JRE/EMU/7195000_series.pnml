@@ -22,7 +22,7 @@ switch(FEAT_TRAINS, SELF, sw_7195000_gfx_spriteset_7195000_back_standard, [build
 /*---END OF SECTION---*/
 
 /*---GFX: Front/Back Cab Car Switches---*/
-switch(FEAT_TRAINS, SELF, sw_7195000_gfx_frontback_flipcheck_standard, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_7195000_gfx_frontback_flipcheck_standard, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_7195000_front_standard;
  default: sw_7195000_gfx_spriteset_7195000_back_standard;
 }

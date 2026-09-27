@@ -25,12 +25,12 @@ alternative_sprites(spriteset_KHE131_back_hachi,          ZOOM_LEVEL_NORMAL, BIT
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //KHE131 Suigun
-switch(FEAT_TRAINS, SELF, sw_KHE131_suigun_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KHE131_suigun_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KHE131_front_suigun;
  default: spriteset_KHE131_back_suigun;
 }
 //KHE131 Hachi
-switch(FEAT_TRAINS, SELF, sw_KHE131_hachi_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KHE131_hachi_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KHE131_front_hachi;
  default: spriteset_KHE131_back_hachi;
 }

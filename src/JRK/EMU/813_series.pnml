@@ -55,22 +55,22 @@ switch(FEAT_TRAINS,SELF, sw_813_gfx_pantograph_pos_fuku, position_in_vehid_chain
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //813 Standard
-switch(FEAT_TRAINS, SELF, sw_813_std_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_813_std_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_813_front;
  default: spriteset_813_back;
 }
 //813 Standard 2
-switch(FEAT_TRAINS, SELF, sw_813_std2_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_813_std2_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_813_midtype_front;
  default: spriteset_813_midtype_back;
 }
 //813 Fukuhoku Yutaka
-switch(FEAT_TRAINS, SELF, sw_813_fuku_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_813_fuku_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_813_front_fuku;
  default: spriteset_813_back_fuku;
 }
 //813 Fukuhoku Yutaka 2
-switch(FEAT_TRAINS, SELF, sw_813_fuku2_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_813_fuku2_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_813_midtype_front_fuku;
  default: spriteset_813_midtype_back_fuku;
 }

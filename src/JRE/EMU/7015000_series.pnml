@@ -45,12 +45,12 @@ switch(FEAT_TRAINS, SELF, sw_7015_back_Sendai, [build_year>2003 || date_of_last_
 /*---END OF SECTION---*/
 
 /*---FRONT/BACK CAR SWITCH BLOCK---*/
-switch(FEAT_TRAINS, SELF, sw_7015_gfx_frontback__flipcheck_Tazawako, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_7015_gfx_frontback__flipcheck_Tazawako, train_is_driving_backwards != vehicle_is_flipped){
   0: sw_7015_front_Tazawako;
   default: sw_7015_back_Tazawako;
 }
 
-switch(FEAT_TRAINS, SELF, sw_7015_gfx_frontback__flipcheck_Sendai, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_7015_gfx_frontback__flipcheck_Sendai, train_is_driving_backwards != vehicle_is_flipped){
   0: sw_7015_front_Sendai;
   default: sw_7015_back_Sendai;
 }

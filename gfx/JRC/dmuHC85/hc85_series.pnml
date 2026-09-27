@@ -29,7 +29,7 @@ switch(FEAT_TRAINS, SELF, sw_enhc85_original_reversing, position_in_consist){
 	spriteset_hc85_rev_front_original;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_enhc85_original, vehicle_is_flipped){
+switch(FEAT_TRAINS, PARENT, sw_enhc85_original, train_is_driving_backwards != vehicle_is_flipped){
 	0 : sw_enhc85_original_following;
 	sw_enhc85_original_reversing;
 }

@@ -73,7 +73,7 @@ switch(FEAT_TRAINS, SELF, sw_651_gfx_pantocheck_hitachi, position_in_vehid_chain
  0: spriteset_651_back_hitachi;
 default: spriteset_651_back_panto_hitachi;
 }
-switch(FEAT_TRAINS, SELF, sw_651_gfx_frontback_flipcheck_hitachi, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_651_gfx_frontback_flipcheck_hitachi, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_651_front_hitachi;
  default: sw_651_gfx_pantocheck_hitachi;
 }
@@ -81,7 +81,7 @@ switch(FEAT_TRAINS, SELF, sw_651_gfx_pantocheck_akagi, position_in_vehid_chain){
  0: spriteset_651_back_akagi;
 default: spriteset_651_back_panto_akagi;
 }
-switch(FEAT_TRAINS, SELF, sw_651_gfx_frontback_flipcheck_akagi, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_651_gfx_frontback_flipcheck_akagi, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_651_front_akagi;
  default: sw_651_gfx_pantocheck_akagi;
 }

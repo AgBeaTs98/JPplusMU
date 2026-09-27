@@ -28,7 +28,7 @@ switch(FEAT_TRAINS, SELF, sw_311_gfx_year_back_pantograph, current_year){
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 
 //311 Tokai
-switch(FEAT_TRAINS, SELF, sw_311_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_311_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_311_front;
  default: sw_311_gfx_year_back_pantograph;
 }

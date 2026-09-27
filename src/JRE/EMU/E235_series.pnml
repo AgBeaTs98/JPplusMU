@@ -68,7 +68,7 @@ switch(FEAT_TRAINS, SELF, sw_E235_gfx_pantocheck_yama, position_in_vehid_chain){
  0: spriteset_E235_back_yama;
  default: spriteset_E235_backpant_yama;
 }
-switch(FEAT_TRAINS, SELF, sw_E235_gfx_frontback_flipcheck_yama, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E235_gfx_frontback_flipcheck_yama, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E235_front_yama;
  default: sw_E235_gfx_pantocheck_yama;
 }
@@ -78,7 +78,7 @@ switch(FEAT_TRAINS, SELF, sw_E235_gfx_pantocheck_yoko, position_in_vehid_chain){
  0: spriteset_E235_back_yoko;
  default: spriteset_E235_backpant_yoko;
 }
-switch(FEAT_TRAINS, SELF, sw_E235_gfx_frontback_flipcheck_yoko, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E235_gfx_frontback_flipcheck_yoko, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E235_front_yoko;
  default: sw_E235_gfx_pantocheck_yoko;
 }

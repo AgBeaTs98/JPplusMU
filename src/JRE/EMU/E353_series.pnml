@@ -45,7 +45,7 @@ switch(FEAT_TRAINS, SELF, sw_E353_gfx_pantocheck_azusa, position_in_vehid_chain)
  0: spriteset_E353_back_azusa;
 default: spriteset_E353_back_panto_azusa;
 }
-switch(FEAT_TRAINS, SELF, sw_E353_gfx_frontback_flipcheck_azusa, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_E353_gfx_frontback_flipcheck_azusa, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_E353_front_azusa;
  default: sw_E353_gfx_pantocheck_azusa;
 }

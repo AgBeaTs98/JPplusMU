@@ -112,7 +112,7 @@ switch(FEAT_TRAINS, SELF, sw_711_gfx_pantocheck, position_in_vehid_chain){
  0: sw_711_gfx_spriteset_back;
  default: sw_711_gfx_spriteset_backpanto;
 }
-switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_711_gfx_spriteset_front;
  default: sw_711_gfx_pantocheck;
 }
@@ -122,7 +122,7 @@ switch(FEAT_TRAINS, SELF, sw_711_gfx_pantocheck_refurb_2door, position_in_vehid_
  0: spriteset_711_back_refurb_2door;
  default: sw_711_gfx_spriteset_backpanto_refurb_2d;
 }
-switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_2door, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_2door, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_711_front_refurb_2door;
  default: sw_711_gfx_pantocheck_refurb_2door;
 }
@@ -132,7 +132,7 @@ switch(FEAT_TRAINS, SELF, sw_711_gfx_pantocheck_refurb_3door, position_in_vehid_
  0: spriteset_711_back_refurb_3door;
  default: sw_711_gfx_spriteset_backpanto_refurb_3d;
 }
-switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_3door, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_3door, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_711_front_refurb_3door;
  default: sw_711_gfx_pantocheck_refurb_3door;
 }
@@ -142,7 +142,7 @@ switch(FEAT_TRAINS, SELF, sw_711_gfx_pantocheck_refurb_ac, position_in_vehid_cha
  0: spriteset_711_back_refurb_ac;
  default: spriteset_711_back_refurb_ac_sarm;
 }
-switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_ac, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_711_gfx_frontback_flipcheck_refurb_ac, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_711_front_refurb_ac;
  default: sw_711_gfx_pantocheck_refurb_ac;
 }

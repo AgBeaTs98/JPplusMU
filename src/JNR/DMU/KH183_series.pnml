@@ -64,11 +64,11 @@ alternative_sprites(spriteset_KH184_mid_rev_JNR,           ZOOM_LEVEL_NORMAL, BI
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 
 //KH183-0 JNR
-switch(FEAT_TRAINS, SELF, sw_KH183_0_JNR_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_0_JNR_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_0_revflip_JNR;
  default: spriteset_KH183_0_rev_JNR;
 }
-switch(FEAT_TRAINS, SELF, sw_KH183_0_JNR_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_0_JNR_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_0_JNR;
  default: spriteset_KH183_0_frontflip_JNR;
 }
@@ -81,11 +81,11 @@ switch(FEAT_TRAINS, SELF, sw_KH183_0_JNR_gfx_frontback_revcheck_posfront, positi
  default: sw_KH183_0_JNR_gfx_frontback_revcheck_posback;
 }
 //KH183-100 JNR
-switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_100_revflip_JNR;
  default: spriteset_KH183_100_rev_JNR;
 }
-switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_100_JNR;
  default: spriteset_KH183_100_frontflip_JNR;
 }
@@ -98,11 +98,11 @@ switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR_gfx_frontback_revcheck_posfront, posi
  default: sw_KH183_100_JNR_gfx_frontback_revcheck_posback;
 }
 //KH183-100 JNR2
-switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR2_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR2_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_100_revflip_JNR2;
  default: spriteset_KH183_100_rev_JNR2;
 }
-switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR2_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH183_100_JNR2_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH183_100_JNR2;
  default: spriteset_KH183_100_frontflip_JNR2;
 }

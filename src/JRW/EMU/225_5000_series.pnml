@@ -171,7 +171,7 @@ switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_pantocheck_5000type, position_in_vehid
  0: sw_225_5000_gfx_spriteset_225_5000_back_5000type;
 default: sw_225_5000_gfx_spriteset_225_5000_back_5000type;
 }
-switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5000type, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5000type, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_225_5000_gfx_spriteset_225_5000_front_5000type;
  default: sw_225_5000_gfx_pantocheck_5000type;
 }
@@ -179,7 +179,7 @@ switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_pantocheck_5100type_nw, position_in_ve
  0: spriteset_225_5000_back_5100type_nw;
 default: spriteset_225_5000_back_5100type_nw;
 }
-switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5100type_nw, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5100type_nw, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_225_5000_front_5100type_nw;
  default: sw_225_5000_gfx_pantocheck_5100type_nw;
 }
@@ -187,7 +187,7 @@ switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_pantocheck_5100type_ww, position_in_ve
  0: spriteset_225_5000_back_5100type_ww;
 default: spriteset_225_5000_back_5100type_ww;
 }
-switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5100type_ww, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_5100type_ww, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_225_5000_front_5100type_ww;
  default: sw_225_5000_gfx_pantocheck_5100type_ww;
 }
@@ -195,7 +195,7 @@ switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_pantocheck_6000type, position_in_vehid
  0: sw_225_5000_gfx_spriteset_225_5000_back_6000type;
 default: sw_225_5000_gfx_spriteset_225_5000_back_6000type;
 }
-switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_6000type, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_225_5000_gfx_frontback_flipcheck_6000type, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_225_5000_gfx_spriteset_225_5000_front_6000type;
  default: sw_225_5000_gfx_pantocheck_6000type;
 }

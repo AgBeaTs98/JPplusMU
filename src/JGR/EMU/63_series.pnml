@@ -27,7 +27,7 @@ switch(FEAT_TRAINS,SELF, sw_EMU63_gfx_std_pantograph_pos, position_in_vehid_chai
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 
 //standard normal type
-switch(FEAT_TRAINS, SELF, sw_EMU63_gfx_std_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_EMU63_gfx_std_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_EMU63_std_mufront;
  default: spriteset_EMU63_std_muback;
 }

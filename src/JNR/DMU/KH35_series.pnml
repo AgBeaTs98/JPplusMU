@@ -89,11 +89,11 @@ switch(FEAT_TRAINS, SELF, sw_KH35_front_lv, cargo_subtype) {
   3: spriteset_KH35_red2;
 }
 //KH35 JNR Red Cream 1
-switch(FEAT_TRAINS, SELF, sw_KH35_jnr_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH35_jnr_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_KH35_revflip_lv;
  default: sw_KH35_rev_lv;
 }
-switch(FEAT_TRAINS, SELF, sw_KH35_jnr_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH35_jnr_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_KH35_front_lv;
  default: sw_KH35_frontflip_lv;
 }

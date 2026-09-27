@@ -38,7 +38,7 @@ switch(FEAT_TRAINS, SELF, sw_313_gfx_back_livery,  cargo_subtype) {
   1:spriteset_313_back_twop;
   0:spriteset_313_back_onep;
 }
-switch(FEAT_TRAINS, SELF, sw_313_gfx_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_313_gfx_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_313_front;
  default: sw_313_gfx_back_livery;
 }

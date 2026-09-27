@@ -56,7 +56,7 @@ switch(FEAT_TRAINS, SELF, sw_215_gfx_pantocheck_jre215, position_in_vehid_chain)
   0: spriteset_215_back_jre215;
   default: spriteset_215_back_panto_jre215;
 }
-switch(FEAT_TRAINS, SELF, sw_215_gfx_frontback_flipcheck_jre215, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_215_gfx_frontback_flipcheck_jre215, train_is_driving_backwards != vehicle_is_flipped){
   0: spriteset_215_front_jre215;
   default: sw_215_gfx_pantocheck_jre215;
 }

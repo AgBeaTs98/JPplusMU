@@ -38,11 +38,11 @@ alternative_sprites(spriteset_KH85_mid_rev_JRC,           ZOOM_LEVEL_NORMAL, BIT
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //KH85 Cab JRC
-switch(FEAT_TRAINS, SELF, sw_KH85_JRC_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH85_JRC_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH85_revflip_JRC;
  default: spriteset_KH85_rev_JRC;
 }
-switch(FEAT_TRAINS, SELF, sw_KH85_JRC_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH85_JRC_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH85_JRC;
  default: spriteset_KH85_frontflip_JRC;
 }
@@ -55,11 +55,11 @@ switch(FEAT_TRAINS, SELF, sw_KH85_JRC_gfx_frontback_revcheck_posfront, position_
  default: sw_KH85_JRC_gfx_frontback_revcheck_posback;
 }
 //KH85 Wideview Cab JRC
-switch(FEAT_TRAINS, SELF, sw_KH85_widev_JRC_gfx_frontback_flipcheck_posback, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH85_widev_JRC_gfx_frontback_flipcheck_posback, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH85_widev_revflip_JRC;
  default: spriteset_KH85_widev_rev_JRC;
 }
-switch(FEAT_TRAINS, SELF, sw_KH85_widev_JRC_gfx_frontback_flipcheck_posfront, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH85_widev_JRC_gfx_frontback_flipcheck_posfront, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH85_widev_JRC;
  default: spriteset_KH85_widev_frontflip_JRC;
 }

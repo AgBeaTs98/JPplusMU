@@ -174,7 +174,7 @@ switch(FEAT_TRAINS, SELF, sw_485_gfx_pantocheck_jnr_inital, position_in_vehid_ch
  0: spriteset_485_back_jnr_inital;
 default: spriteset_485_back_panto_jnr_inital;
 }
-switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_inital, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_inital, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_485_front_jnr_inital;
  default: sw_485_gfx_pantocheck_jnr_inital;
 }
@@ -182,7 +182,7 @@ switch(FEAT_TRAINS, SELF, sw_485_gfx_pantocheck_jnr_inital2, position_in_vehid_c
  0: spriteset_485_back2_jnr_inital;
 default: spriteset_485_back2_panto_jnr_inital;
 }
-switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_inital2, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_inital2, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_485_front2_jnr_inital;
  default: sw_485_gfx_pantocheck_jnr_inital2;
 }
@@ -190,7 +190,7 @@ switch(FEAT_TRAINS, SELF, sw_485_gfx_pantocheck_jnr_late, position_in_vehid_chai
  0: spriteset_485_back_jnr_late;
 default: spriteset_485_back_panto_jnr_late;
 }
-switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_late, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_late, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_485_front_jnr_late;
  default: sw_485_gfx_pantocheck_jnr_late;
 }
@@ -198,7 +198,7 @@ switch(FEAT_TRAINS, SELF, sw_485_gfx_pantocheck_jnr_late2, position_in_vehid_cha
  0: spriteset_485_back2_jnr_late;
 default: spriteset_485_back2_panto_jnr_late;
 }
-switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_late2, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_485_gfx_frontback_flipcheck_jnr_late2, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_485_front2_jnr_late;
  default: sw_485_gfx_pantocheck_jnr_late2;
 }

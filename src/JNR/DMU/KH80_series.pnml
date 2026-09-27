@@ -135,11 +135,11 @@ switch(FEAT_TRAINS, SELF, sw_KH80_gfx_pantograph_pos_kiha82, num_vehs_in_vehid_c
 }
 /*---END OF SECTION---*/
 /*---GFX: Front/Back Cab Car Switches---*/
-switch(FEAT_TRAINS, SELF, sw_KH80_gfx_frontback_flipcheck_kiha81, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH80_gfx_frontback_flipcheck_kiha81, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH80_front_kiha81;
  default: spriteset_KH80_back_kiha81;
 }
-switch(FEAT_TRAINS, SELF, sw_KH80_gfx_frontback_flipcheck_kiha82, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH80_gfx_frontback_flipcheck_kiha82, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH80_front_kiha82;
  default: spriteset_KH80_back_kiha82;
 }

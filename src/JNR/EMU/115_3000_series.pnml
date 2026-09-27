@@ -120,7 +120,7 @@ switch(FEAT_TRAINS, SELF, sw_1153000_gfx_pantocheck_setouchi_1, position_in_vehi
  0: spriteset_1153000_back_setouchi_1;
 default: spriteset_1153000_back_panto_setouchi_1;
 }
-switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_setouchi_1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_setouchi_1, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_1153000_front_setouchi_1;
  default: sw_1153000_gfx_pantocheck_setouchi_1;
 }
@@ -128,7 +128,7 @@ switch(FEAT_TRAINS, SELF, sw_1153000_gfx_pantocheck_hiroshima_1, position_in_veh
  0: spriteset_1153000_back_hiroshima_1;
 default: spriteset_1153000_back_panto_hiroshima_1;
 }
-switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_hiroshima_1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_hiroshima_1, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_1153000_front_hiroshima_1;
  default: sw_1153000_gfx_pantocheck_hiroshima_1;
 }
@@ -136,7 +136,7 @@ switch(FEAT_TRAINS, SELF, sw_1153000_gfx_pantocheck_jrw_regional_1, position_in_
  0: spriteset_1153000_back_jrw_regional_1;
 default: spriteset_1153000_back_panto_jrw_regional_1;
 }
-switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_jrw_regional_1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_jrw_regional_1, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_1153000_front_jrw_regional_1;
  default: sw_1153000_gfx_pantocheck_jrw_regional_1;
 }
@@ -144,7 +144,7 @@ switch(FEAT_TRAINS, SELF, sw_1153000_gfx_pantocheck_jrw_refurb_1, position_in_ve
  0: spriteset_1153000_back_jrw_refurb_1;
 default: spriteset_1153000_back_panto_jrw_refurb_1;
 }
-switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_jrw_refurb_1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_1153000_gfx_frontback_flipcheck_jrw_refurb_1, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_1153000_front_jrw_refurb_1;
  default: sw_1153000_gfx_pantocheck_jrw_refurb_1;
 }

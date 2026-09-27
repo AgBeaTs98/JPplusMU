@@ -105,7 +105,7 @@ switch(FEAT_TRAINS, SELF, sw_80_gfx_861_pantocheck, position_in_vehid_chain){
  0: spriteset_80_back_1;
  default: spriteset_80_back_panto1;
 }
-switch(FEAT_TRAINS, SELF, sw_80_gfx_861_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_80_gfx_861_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_80_front_1;
  default: sw_80_gfx_861_pantocheck;
 }
@@ -115,7 +115,7 @@ switch(FEAT_TRAINS, SELF, sw_80_gfx_862_pantocheck, position_in_vehid_chain){
  0: spriteset_80_back_2;
  default: spriteset_80_back_panto2;
 }
-switch(FEAT_TRAINS, SELF, sw_80_gfx_862_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_80_gfx_862_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_80_front_2;
  default: sw_80_gfx_862_pantocheck;
 }
@@ -125,7 +125,7 @@ switch(FEAT_TRAINS, SELF, sw_80_gfx_85_pantocheck, position_in_vehid_chain){
  0: spriteset_80_back_2;
  default: spriteset_80_back_panto2;
 }
-switch(FEAT_TRAINS, SELF, sw_80_gfx_85_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_80_gfx_85_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_80_front_3;
  default: sw_80_gfx_85_pantocheck;
 }
@@ -135,7 +135,7 @@ switch(FEAT_TRAINS, SELF, sw_80_gfx_852_pantocheck, position_in_vehid_chain){
  0: spriteset_80_back_1;
  default: spriteset_80_back_panto1;
 }
-switch(FEAT_TRAINS, SELF, sw_80_gfx_852_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_80_gfx_852_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_80_front_3;
  default: sw_80_gfx_852_pantocheck;
 }
@@ -145,7 +145,7 @@ switch(FEAT_TRAINS, SELF, sw_80_gfx_862_kansai_pantocheck, position_in_vehid_cha
  0: spriteset_80_back_kansai;
  default: spriteset_80_back_panto_kansai;
 }
-switch(FEAT_TRAINS, SELF, sw_80_gfx_862_kansai_frontback_flipcheck, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_80_gfx_862_kansai_frontback_flipcheck, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_80_front_kansai;
  default: sw_80_gfx_862_kansai_pantocheck;
 }

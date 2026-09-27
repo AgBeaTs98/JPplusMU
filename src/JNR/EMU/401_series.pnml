@@ -78,7 +78,7 @@ switch(FEAT_TRAINS, SELF, sw_401_gfx_pantocheck_initial, position_in_vehid_chain
  0: spriteset_401_back_initial;
 default: spriteset_401_back_panto_initial;
 }
-switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_initial, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_initial, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_401_front_initial;
  default: sw_401_gfx_pantocheck_initial;
 }
@@ -86,7 +86,7 @@ switch(FEAT_TRAINS, SELF, sw_401_gfx_pantocheck_joban, position_in_vehid_chain){
  0: spriteset_401_back_joban;
 default: spriteset_401_back_panto_joban;
 }
-switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_joban, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_joban, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_401_front_joban;
  default: sw_401_gfx_pantocheck_joban;
 }
@@ -94,7 +94,7 @@ switch(FEAT_TRAINS, SELF, sw_401_gfx_pantocheck_kyushu, position_in_vehid_chain)
  0: spriteset_401_back_kyushu;
 default: spriteset_401_back_panto_kyushu;
 }
-switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_kyushu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_401_gfx_frontback_flipcheck_kyushu, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_401_front_kyushu;
  default: sw_401_gfx_pantocheck_kyushu;
 }

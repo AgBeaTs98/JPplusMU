@@ -52,13 +52,13 @@ switch(FEAT_TRAINS,SELF, sw_205_gfx_pantograph_pos_keto, position_in_vehid_chain
 
 /*---GFX: Front/Back Cab Car Switches + DUAL_HEADED fix---*/
 //205 Yamanote
-switch(FEAT_TRAINS, SELF, sw_205_gfx_frontback_yama, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_205_gfx_frontback_yama, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_205_back_yama;
  default: spriteset_205_front_yama;
 }
 
 //205 Keto
-switch(FEAT_TRAINS, SELF, sw_205_gfx_frontback_keto, vehicle_is_flipped) {
+switch(FEAT_TRAINS, SELF, sw_205_gfx_frontback_keto, train_is_driving_backwards != vehicle_is_flipped) {
   1: spriteset_205_back_keto;
  default: spriteset_205_front_keto;
 }

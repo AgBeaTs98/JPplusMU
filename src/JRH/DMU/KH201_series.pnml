@@ -26,7 +26,7 @@ switch(FEAT_TRAINS, SELF, sw_KH201_gfx_pantocheck_std, position_in_vehid_chain){
  0: spriteset_KH201_back_std;
 default: spriteset_KH201_back_std;
 }
-switch(FEAT_TRAINS, SELF, sw_KH201_gfx_frontback_flipcheck_std, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_KH201_gfx_frontback_flipcheck_std, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_KH201_front_std;
  default: sw_KH201_gfx_pantocheck_std;
 }

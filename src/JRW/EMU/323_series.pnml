@@ -52,7 +52,7 @@ switch(FEAT_TRAINS, SELF, sw_323_gfx_pantocheck_std, position_in_vehid_chain){
  0: spriteset_323_back_std;
 default: spriteset_323_back_std;
 }
-switch(FEAT_TRAINS, SELF, sw_323_gfx_frontback_flipcheck_std, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_323_gfx_frontback_flipcheck_std, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_323_front_std;
  default: sw_323_gfx_pantocheck_std;
 }

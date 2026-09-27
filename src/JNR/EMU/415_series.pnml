@@ -185,7 +185,7 @@ switch(FEAT_TRAINS, SELF, sw_415_gfx_pantocheck_initial, position_in_vehid_chain
  0: spriteset_415_back_initial;
 default: spriteset_415_back_panto_initial;
 }
-switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_initial, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_initial, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_415_front_initial;
  default: sw_415_gfx_pantocheck_initial;
 }
@@ -193,7 +193,7 @@ switch(FEAT_TRAINS, SELF, sw_415_gfx_pantocheck_joban, position_in_vehid_chain){
  0: spriteset_415_back_joban;
 default: spriteset_415_back_panto_joban;
 }
-switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_joban, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_joban, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_415_front_joban;
  default: sw_415_gfx_pantocheck_joban;
 }
@@ -201,7 +201,7 @@ switch(FEAT_TRAINS, SELF, sw_415_gfx_pantocheck_kyushu, position_in_vehid_chain)
  0: sw_415_gfx_spriteset_415_back_kyushu;
 default: sw_415_gfx_spriteset_415_back_panto_kyushu;
 }
-switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_kyushu, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_kyushu, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_415_gfx_spriteset_415_front_kyushu;
  default: sw_415_gfx_pantocheck_kyushu;
 }
@@ -209,7 +209,7 @@ switch(FEAT_TRAINS, SELF, sw_415_gfx_pantocheck_jrw_regional_1, position_in_vehi
  0: sw_415_gfx_spriteset_415_back_jrw_regional_1;
 default: sw_415_gfx_spriteset_415_back_panto_jrw_regional_1;
 }
-switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_jrw_regional_1, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_jrw_regional_1, train_is_driving_backwards != vehicle_is_flipped){
  0: sw_415_gfx_spriteset_415_front_jrw_regional_1;
  default: sw_415_gfx_pantocheck_jrw_regional_1;
 }
@@ -217,7 +217,7 @@ switch(FEAT_TRAINS, SELF, sw_415_gfx_pantocheck_jrw_regional_2, position_in_vehi
  0: spriteset_415_back_jrw_regional_2;
 default: spriteset_415_back_panto_jrw_regional_2;
 }
-switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_jrw_regional_2, vehicle_is_flipped){
+switch(FEAT_TRAINS, SELF, sw_415_gfx_frontback_flipcheck_jrw_regional_2, train_is_driving_backwards != vehicle_is_flipped){
  0: spriteset_415_front_jrw_regional_2;
  default: sw_415_gfx_pantocheck_jrw_regional_2;
 }
