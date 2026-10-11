@@ -92,6 +92,10 @@ switch(FEAT_TRAINS, SELF, sw_KH111_subtypetext_main, cargo_subtype) {
 }
 
 /*---END OF SECTION---*/
+switch (FEAT_TRAINS, SELF, sw_KH111_prm_capacity, position_in_vehid_chain%2) {
+  0: return 134*180/100;
+  1: return 138*180/100;
+}
 
 //Coupling
   switch(FEAT_TRAINS, SELF, sw_KH111_attach_vehid, [vehicle_type_id == dmu_KH110 || vehicle_type_id == dmu_KH111 || vehicle_type_id == dmu_KHE120 || vehicle_type_id == dmu_KHE130 || vehicle_type_id == dmu_KHE131]) {
@@ -106,7 +110,7 @@ item(FEAT_TRAINS, dmu_KH111) {
         vehicle_life:                 50;
         reliability_decay:            22;
 
-        cargo_capacity:               param_capacity_rapid;
+        cargo_capacity:               1;
         loading_speed:                param_loading_2D;
         cargo_age_period:             param_decay_local;
         cost_factor:                  20;
@@ -114,7 +118,7 @@ item(FEAT_TRAINS, dmu_KH111) {
 
         speed:                        100 km/h;
         track_type:                   TR_1067_NE;
-        power:                        308 kW;
+        power:                        309*2*1342/1000;
         weight:                       31 ton;
 
         climates_available:           ALL_CLIMATES;
@@ -150,7 +154,8 @@ item(FEAT_TRAINS, dmu_KH111) {
         string(STR_LIVERIES, string(LV_VARIOUS)));
 
         cargo_subtype_text:           sw_KH111_subtypetext_main;
-        purchase_cargo_capacity:      param_capacity_rapid - param_capacity_rapid;
+	cargo_capacity:               sw_KH111_prm_capacity;
+        purchase_cargo_capacity:      138;
         can_attach_wagon:			  sw_KH111_attach_vehid;
         //start_stop:                   ;
     }

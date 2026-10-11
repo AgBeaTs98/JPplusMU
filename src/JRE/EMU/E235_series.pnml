@@ -91,7 +91,6 @@ switch(FEAT_TRAINS, SELF, sw_E235_gfx_frontback_flipcheck_yoko, train_is_driving
 /*---END OF SECTION---*/
 
 /*---GFX: Livery Refitting Switches---*/
-
 //Main Switches
 switch(FEAT_TRAINS, SELF, sw_E235_gfx_mucar,  cargo_subtype) {
   4: spriteset_E235_middd_yoko;
@@ -118,7 +117,75 @@ switch(FEAT_TRAINS, SELF, sw_E235_subtypetext_main, cargo_subtype) {
   0: string(LV_YAMANOTE);
 }
 /*---END OF SECTION---*/
+switch (FEAT_TRAINS, SELF, sw_E235_1000_prm_mucarPower, position_in_vehid_chain%7) {
+  0..1 : return 161;
+  4..5 : return 161;
+  return 0;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_prm_mucarPower, cargo_subtype) {
+  1: sw_E235_1000_prm_mucarPower;
+  return 161;
+}
 
+ switch (FEAT_TRAINS, SELF, sw_E235_1000_11car_prm_mucarWeight, position_in_vehid_chain%9) {
+  0: return 328;
+  1: return 329;
+  2: return 392;
+  3: return 396;
+  4: return 337;
+  5: return 320;
+  6: return 289;
+  7: return 306;
+  8: return 309;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_5car_prm_mucarWeight, position_in_vehid_chain&3) {
+  0: return 304;
+  1: return 316;
+  2: return 315;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_prm_mucarWeight, num_vehs_in_vehid_chain) {
+  0..7: sw_E235_1000_5car_prm_mucarWeight;
+  sw_E235_1000_11car_prm_mucarWeight;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_prm_mucarWeight, cargo_subtype) {
+  sw_E235_1000_prm_mucarWeight;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_11car_prm_headWeight, position_in_vehid_chain%2) {
+  0: return 348;
+  1: return 341;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_5car_prm_headWeight, position_in_vehid_chain%2) {
+  0: return 346;
+  1: return 315;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_prm_headWeight, num_vehs_in_vehid_chain) {
+  0..1: sw_E235_1000_5car_prm_headWeight;
+  sw_E235_1000_11car_prm_headWeight;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_prm_headWeight, cargo_subtype) {
+  sw_E235_1000_prm_headWeight;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_11car_prm_mucarCapacity, position_in_vehid_chain%9) {
+  2..3: return 90;
+  4: return 153*180/100;
+  return 160*180/100;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_1000_prm_mucarCapacity, num_vehs_in_vehid_chain) {
+  0..7: return 160*180/100;
+  sw_E235_1000_11car_prm_mucarCapacity;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_prm_mucarCapacity, cargo_subtype) {
+  1: sw_E235_1000_prm_mucarCapacity;
+  return 160*180/100;
+}
+
+switch (FEAT_TRAINS, SELF, sw_E235_1000_prm_headCapacity, position_in_vehid_chain%2) {
+  0: return 135*180/100;
+  1: return 142*180/100;
+}
+switch (FEAT_TRAINS, SELF, sw_E235_prm_headCapacity, cargo_subtype) {
+  sw_E235_1000_prm_headCapacity;
+}
 //Coupling
   switch(FEAT_TRAINS, SELF, sw_E235_attach_vehid, [vehicle_type_id == emu_E235 || vehicle_type_id == mu_car]) {
   0: return string(MU_UNIQUE);
@@ -132,7 +199,7 @@ item(FEAT_TRAINS, emu_E235) {
         vehicle_life:                 35;
         reliability_decay:            19;
 
-        cargo_capacity:               param_capacity_local;
+        cargo_capacity:               1;
         loading_speed:                param_loading_4D;
         cargo_age_period:             param_decay_local;
         cost_factor:                  17;
@@ -140,8 +207,8 @@ item(FEAT_TRAINS, emu_E235) {
 
         speed:                       	120 km/h;
         track_type:                   TR_1067_DC;
-        power:                        560 kW;
-        weight:                       31 ton;
+        power:                        1 kW;
+        weight:                       1 ton;
 
         climates_available:           ALL_CLIMATES;
         ai_special_flag:              AI_FLAG_PASSENGER;
@@ -176,19 +243,24 @@ item(FEAT_TRAINS, emu_E235) {
         string(STR_LIVERIES, string(LV_VARIOUS)));
         
         cargo_subtype_text:           sw_E235_subtypetext_main;
-        purchase_cargo_capacity:      param_capacity_local - param_capacity_local;
+        cargo_capacity: sw_E235_prm_headCapacity;
+        purchase_cargo_capacity:      160;
+        power : 0;
+        purchase_power : 140*1342/1000;
+        weight: sw_E235_prm_headWeight()/10;
+        purchase_weight: 31;
         can_attach_wagon:			        sw_E235_attach_vehid;
         //start_stop:                   ;
     }
     /*Multiple Unit Car*/
       livery_override(mu_car){
         default:                      sw_E235_gfx_mucar;
-        cargo_capacity:               param_capacity_local;
+        cargo_capacity:               sw_E235_prm_mucarCapacity;
         loading_speed:                param_loading_4D;
         cargo_age_period:             param_decay_local;
         cargo_subtype_text:           sw_E235_subtypetext_mucar;
-        power: 560/2;
-        weight: 29;
+        power: sw_E235_prm_mucarPower()*4*1342/1000;
+        weight: sw_E235_prm_mucarWeight()/10;
       }
 
 }

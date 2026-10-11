@@ -3,7 +3,7 @@ grf {
 	name:	string(STR_GRF_NAME);
 	desc:	string(STR_GRF_DESC);
 	version:	57;
-	min_compatible_version: 13;
+	min_compatible_version: 14;
 		//japanset3 removal
 		param 4 {
 			 param_japansetdisable {

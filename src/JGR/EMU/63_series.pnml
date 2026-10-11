@@ -60,6 +60,17 @@ switch(FEAT_TRAINS, SELF, sw_EMU63_subtypetext_main, cargo_subtype) {
 
 /*---END OF SECTION---*/
 
+/*--- パラメータ設定：動力設定 ---*/
+switch (FEAT_TRAINS, SELF, sw_63_prm_power_headcar, position_in_vehid_chain%2) {
+	0	: return 163;
+	return 0;
+}
+switch (FEAT_TRAINS, SELF, sw_63_prm_power_mucar, position_in_vehid_chain%2) {
+	0	: return 163;
+	return 0;
+}
+/*--- パラメータ設定：動力設定 終わり ---*/
+
 //Coupling
   switch(FEAT_TRAINS, SELF, sw_EMU63_attach_vehid, [vehicle_type_id == emu_63 || vehicle_type_id == mu_car]) {
   0: return string(MU_UNIQUE);
@@ -76,7 +87,7 @@ item(FEAT_TRAINS, emu_63) {
         vehicle_life:                 8;
         reliability_decay:            22;
 
-        cargo_capacity:               param_capacity_local;
+        cargo_capacity:               136*180/100;
         loading_speed:                param_loading_4D;
         cargo_age_period:             param_decay_local;
         cost_factor:                  16;
@@ -84,7 +95,7 @@ item(FEAT_TRAINS, emu_63) {
 
         speed:                        95 km/h;
         track_type:                   TR_1067_DC;
-        power:                        400 kW;
+        power:                        1 kW;
         weight:                       39 ton;
 
         climates_available:           ALL_CLIMATES;
@@ -120,17 +131,19 @@ item(FEAT_TRAINS, emu_63) {
 
         cargo_subtype_text:     sw_EMU63_subtypetext_main;
         purchase_cargo_capacity:      param_capacity_local - param_capacity_local;
+        power:                        sw_63_prm_power_headcar()*8*1342/1000;
+        purchase_power:                142*1342/1000;
         can_attach_wagon:			  sw_EMU63_attach_vehid;
         //start_stop:           ;
     }
     /*Multiple Unit Car*/
       livery_override(mu_car){
         default:                      sw_EMU63_gfx_mucar;
-        cargo_capacity:               param_capacity_local;
+        cargo_capacity:               136*180/100;
         loading_speed:                param_loading_4D;
         cargo_age_period:             param_decay_local;
         cargo_subtype_text:           sw_EMU63_subtypetext_mucar;
-        power: 132;
+        power: sw_63_prm_power_mucar()*4*1342/1000;
         weight: 61;
       }
 }
